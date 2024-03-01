@@ -7,6 +7,7 @@ import { config } from 'dotenv'
 import userRouter from '../src/user/user.routers.js'
 import publicacionRouter from '../src/Publicacion/publicacion.routers.js'
 import comentarioRouter from '../src/Comentario/comentario.routers.js'
+import categoriaRouter from '../src/categoria/categoria.routers.js'
 
 const app = Express()
 config()
@@ -21,6 +22,7 @@ app.use(morgan('dev'))
 app.use(publicacionRouter)
 app.use(userRouter)
 app.use(comentarioRouter)
+app.use(categoriaRouter)
 
 export const initServer = ()=>{
     app.listen(port)

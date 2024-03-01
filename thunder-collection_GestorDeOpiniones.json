@@ -1,0 +1,441 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "GestorDeOpiniones",
+    "dateExported": "2024-03-01T04:52:50.074Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "dfb6f515-272d-48f9-b262-dba1883cc9f8",
+            "name": "User",
+            "containerId": "",
+            "created": "2024-02-27T03:09:12.566Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "aed0ffa3-7c28-4252-9ac3-9b5c7cab2f8f",
+            "name": "Publicaciones",
+            "containerId": "",
+            "created": "2024-02-27T04:16:44.610Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "c98a3779-c8fc-496a-b3c1-624a0e9d6b6b",
+            "name": "Comentario",
+            "containerId": "",
+            "created": "2024-02-28T02:47:14.983Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "ed70833e-4ac3-4ca7-a0d8-c93f2804c8c2",
+            "name": "Categoria",
+            "containerId": "",
+            "created": "2024-03-01T04:17:48.873Z",
+            "sortNum": 40000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "95821307-4fff-4ffa-b438-be616a49fe08",
+            "colId": "085c87e7-e003-49fd-9799-464fcd3ad1f8",
+            "containerId": "dfb6f515-272d-48f9-b262-dba1883cc9f8",
+            "name": "AgregarUsuario",
+            "url": "agregarUsuario",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-27T03:09:23.532Z",
+            "modified": "2024-02-27T04:18:52.625Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "nombre",
+                        "value": "josue"
+                    },
+                    {
+                        "name": "apellido",
+                        "value": "perez"
+                    },
+                    {
+                        "name": "email",
+                        "value": "jperez@gmail.com"
+                    },
+                    {
+                        "name": "usuario",
+                        "value": "jperez"
+                    },
+                    {
+                        "name": "contraseña",
+                        "value": "12345678"
+                    },
+                    {
+                        "name": "telefono",
+                        "value": "12345678"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "59679e25-22d0-4c7d-841e-f61e45402c68",
+            "colId": "085c87e7-e003-49fd-9799-464fcd3ad1f8",
+            "containerId": "dfb6f515-272d-48f9-b262-dba1883cc9f8",
+            "name": "login",
+            "url": "login",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-02-27T03:27:57.873Z",
+            "modified": "2024-03-01T04:41:44.707Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "usuario",
+                        "value": "jperez"
+                    },
+                    {
+                        "name": "contraseña",
+                        "value": "12345678"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "f42e9a88-b435-441c-9456-5d6b322013c6",
+            "colId": "085c87e7-e003-49fd-9799-464fcd3ad1f8",
+            "containerId": "dfb6f515-272d-48f9-b262-dba1883cc9f8",
+            "name": "Actualizar",
+            "url": "actualizar/65dd5be74b0b0222c41b8a1c",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-02-27T03:51:05.379Z",
+            "modified": "2024-02-27T03:55:48.715Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWRkNTQ0M2YxZjM4YzcyOGU4NmFhMGEiLCJ1c3VhcmlvIjoianBlcmV6Iiwibm9tYnJlIjoiam9zdWUiLCJpYXQiOjE3MDkwMDU4ODksImV4cCI6MTcwOTAyMDI4OX0.YgLj-slXZuvpYRC5WscOFi1yH2wVswV408gR42SyV4w"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "nombre",
+                        "value": "juanf"
+                    },
+                    {
+                        "name": "contraseñaAntigua",
+                        "value": "12345678"
+                    },
+                    {
+                        "name": "contraseña",
+                        "value": "87654321"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "9a3826be-0222-4341-8ceb-6249c0e08d8f",
+            "colId": "085c87e7-e003-49fd-9799-464fcd3ad1f8",
+            "containerId": "aed0ffa3-7c28-4252-9ac3-9b5c7cab2f8f",
+            "name": "agregar",
+            "url": "agregarPublicacion",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2024-02-27T04:16:49.710Z",
+            "modified": "2024-03-01T04:42:14.831Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUxNWMzODQ3YTczMDY0NDA1ZDNkZTciLCJ1c3VhcmlvIjoianBlcmV6Iiwibm9tYnJlIjoiam9zdWUiLCJpYXQiOjE3MDkyNjgxMDQsImV4cCI6MTcwOTI4MjUwNH0.oly8mRSW8KpMhIjq4oNbrwQ_8ZJgRD70gH8Biczb0tY"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "titulo",
+                        "value": "La mejor computadora"
+                    },
+                    {
+                        "name": "categoria",
+                        "value": "65e15c2d47a73064405d3de5"
+                    },
+                    {
+                        "name": "textoPrincipal",
+                        "value": "La mejor Tecnologia en la compu"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "4544cbbc-84b1-4796-a0a5-92da22fa1149",
+            "colId": "085c87e7-e003-49fd-9799-464fcd3ad1f8",
+            "containerId": "aed0ffa3-7c28-4252-9ac3-9b5c7cab2f8f",
+            "name": "actualizar",
+            "url": "actualizarPublicacion/65dd630f7adce04b5da1087c",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2024-02-27T04:53:25.244Z",
+            "modified": "2024-02-27T05:24:03.032Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWRkNjJhZjdhZGNlMDRiNWRhMTA4NzciLCJ1c3VhcmlvIjoianBlcmV6Iiwibm9tYnJlIjoiam9zdWUiLCJpYXQiOjE3MDkwMTAxNTIsImV4cCI6MTcwOTAyNDU1Mn0.qXMHSOBdkpwUjGxLgX4yW6L_gB-D8LFqEc35GWeDx2M"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "titulo",
+                        "value": "La peor Computdora"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "4c8ef6ff-9a57-4231-8f4a-ae073e5fc90f",
+            "colId": "085c87e7-e003-49fd-9799-464fcd3ad1f8",
+            "containerId": "c98a3779-c8fc-496a-b3c1-624a0e9d6b6b",
+            "name": "agregar",
+            "url": "agregarComentario",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2024-02-28T02:47:21.729Z",
+            "modified": "2024-02-28T04:15:43.820Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWRkNjJhZjdhZGNlMDRiNWRhMTA4NzciLCJ1c3VhcmlvIjoianBlcmV6Iiwibm9tYnJlIjoiam9zdWUiLCJpYXQiOjE3MDkwOTMxNDQsImV4cCI6MTcwOTEwNzU0NH0.htSE14iOtrh2QpKJgztltTZmvnfvUK-WsiCyRebg3q8"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "comentario",
+                        "value": "No sirve para nada la computadora"
+                    },
+                    {
+                        "name": "publicacion",
+                        "value": "65deb331326da8f081507c32"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "40751977-024c-424b-94f4-f144293a036e",
+            "colId": "085c87e7-e003-49fd-9799-464fcd3ad1f8",
+            "containerId": "c98a3779-c8fc-496a-b3c1-624a0e9d6b6b",
+            "name": "actualizar",
+            "url": "actualizarComentario/65dea15d674bd4d99ba5cd09",
+            "method": "PUT",
+            "sortNum": 70000,
+            "created": "2024-02-28T03:15:10.712Z",
+            "modified": "2024-02-28T03:37:17.285Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWRkNjJhZjdhZGNlMDRiNWRhMTA4NzciLCJ1c3VhcmlvIjoianBlcmV6Iiwibm9tYnJlIjoiam9zdWUiLCJpYXQiOjE3MDkwOTA2MDAsImV4cCI6MTcwOTEwNTAwMH0.J_DB-5OqGfaSTELNjmT3rrYAIFWBpOOQx62RctPqq58"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "comentario",
+                        "value": "Esta si sirve es mentira que no sirve "
+                    },
+                    {
+                        "name": "user",
+                        "value": "65dd5be94b0b0222c41b8a1e",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "publicacion",
+                        "value": "65dea71ce30b41e3296f84b6",
+                        "isDisabled": true
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "34304ef7-9bb0-43cb-8884-944da0464275",
+            "colId": "085c87e7-e003-49fd-9799-464fcd3ad1f8",
+            "containerId": "c98a3779-c8fc-496a-b3c1-624a0e9d6b6b",
+            "name": "eliminar",
+            "url": "eliminarComentario/65dea15d674bd4d99ba5cd09",
+            "method": "DELETE",
+            "sortNum": 80000,
+            "created": "2024-02-28T03:47:51.403Z",
+            "modified": "2024-02-28T03:50:26.819Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWRkNjJhZjdhZGNlMDRiNWRhMTA4NzciLCJ1c3VhcmlvIjoianBlcmV6Iiwibm9tYnJlIjoiam9zdWUiLCJpYXQiOjE3MDkwOTIyMTUsImV4cCI6MTcwOTEwNjYxNX0.oDZufnCjV-3J08Mfv6OaCoMLzbstkOMHmEGlm1kcjd4"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c92a075d-6307-4b18-a3d5-cf4ea1473b77",
+            "colId": "085c87e7-e003-49fd-9799-464fcd3ad1f8",
+            "containerId": "aed0ffa3-7c28-4252-9ac3-9b5c7cab2f8f",
+            "name": "eliminar",
+            "url": "eliminarActualizar/65deb331326da8f081507c32",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2024-02-28T04:01:03.633Z",
+            "modified": "2024-02-28T04:16:25.966Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWRkNjJhZjdhZGNlMDRiNWRhMTA4NzciLCJ1c3VhcmlvIjoianBlcmV6Iiwibm9tYnJlIjoiam9zdWUiLCJpYXQiOjE3MDkwOTMxNDQsImV4cCI6MTcwOTEwNzU0NH0.htSE14iOtrh2QpKJgztltTZmvnfvUK-WsiCyRebg3q8"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "bdf32bf3-9caa-4e3b-9471-3375b070d7c3",
+            "colId": "085c87e7-e003-49fd-9799-464fcd3ad1f8",
+            "containerId": "dfb6f515-272d-48f9-b262-dba1883cc9f8",
+            "name": "eliminar",
+            "url": "eliminarUser/65dd5be94b0b0222c41b8a1e",
+            "method": "PUT",
+            "sortNum": 100000,
+            "created": "2024-02-28T04:44:32.767Z",
+            "modified": "2024-02-28T04:50:06.012Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWRkNWJlOTRiMGIwMjIyYzQxYjhhMWUiLCJ1c3VhcmlvIjoianBlcmV6TWEiLCJub21icmUiOiJqb3N1ZSIsImlhdCI6MTcwOTA5NTc2NiwiZXhwIjoxNzA5MTEwMTY2fQ.kClrD16IRnb7nGeU_FJRywoGpBUyzK8GsI66ZmRx1UM"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "b37b99f5-43fd-4fb7-8916-b74ac3400604",
+            "colId": "085c87e7-e003-49fd-9799-464fcd3ad1f8",
+            "containerId": "ed70833e-4ac3-4ca7-a0d8-c93f2804c8c2",
+            "name": "agregar",
+            "url": "agregarCategorias",
+            "method": "POST",
+            "sortNum": 110000,
+            "created": "2024-03-01T04:18:16.202Z",
+            "modified": "2024-03-01T04:20:21.821Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "categoria",
+                        "value": "nada"
+                    },
+                    {
+                        "name": "descripcion",
+                        "value": "nada"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "26ef1c52-a48c-4c31-a80c-0599ed93c2f9",
+            "colId": "085c87e7-e003-49fd-9799-464fcd3ad1f8",
+            "containerId": "ed70833e-4ac3-4ca7-a0d8-c93f2804c8c2",
+            "name": "actualizar",
+            "url": "actualizarCategoria/65e1580e20274035e5ade5a8",
+            "method": "PUT",
+            "sortNum": 120000,
+            "created": "2024-03-01T04:24:31.419Z",
+            "modified": "2024-03-01T04:36:05.540Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "categoria",
+                        "value": "Chisme"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "d025c627-0cb9-413f-add5-7e83643767c7",
+            "colId": "085c87e7-e003-49fd-9799-464fcd3ad1f8",
+            "containerId": "ed70833e-4ac3-4ca7-a0d8-c93f2804c8c2",
+            "name": "eliminar",
+            "url": "eliminarCategoria/65e1580e20274035e5ade5a8",
+            "method": "DELETE",
+            "sortNum": 130000,
+            "created": "2024-03-01T04:36:50.598Z",
+            "modified": "2024-03-01T04:37:27.927Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "15048e8b-128b-4a63-a770-190c16123c2b",
+            "colId": "085c87e7-e003-49fd-9799-464fcd3ad1f8",
+            "containerId": "ed70833e-4ac3-4ca7-a0d8-c93f2804c8c2",
+            "name": "listar",
+            "url": "listarCategoria",
+            "method": "GET",
+            "sortNum": 140000,
+            "created": "2024-03-01T04:39:10.384Z",
+            "modified": "2024-03-01T04:39:38.614Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "0ca5abc7-f40d-4152-a4da-52689cfd5e13",
+            "colId": "085c87e7-e003-49fd-9799-464fcd3ad1f8",
+            "containerId": "aed0ffa3-7c28-4252-9ac3-9b5c7cab2f8f",
+            "name": "listar",
+            "url": "listarPublicacion",
+            "method": "GET",
+            "sortNum": 150000,
+            "created": "2024-03-01T04:50:39.952Z",
+            "modified": "2024-03-01T04:50:44.450Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ],
+    "settings": {
+        "options": {
+            "baseUrl": "http://localhost:3000/"
+        }
+    }
+}

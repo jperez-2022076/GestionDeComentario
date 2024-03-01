@@ -6,8 +6,9 @@ const publicacionSchema = Schema({
         requed:true
     },
     categoria:{
-        type:String,
-        required:true
+        type:Schema.ObjectId,
+        ref:'categoria',
+        required: true
     },
     textoPrincipal:{
         type:String,

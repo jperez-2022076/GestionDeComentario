@@ -1,6 +1,7 @@
 'use strict'
 
 import comentarioModel from "../Comentario/comentario.model.js"
+import categoriasModel from "../categoria/categorias.model.js"
 import userModel from "../user/user.model.js"
 
 import publicacionModel from "./publicacion.model.js"
@@ -11,6 +12,8 @@ export const agregarPublicacion = async(req,res)=>{
         let datos = req.body
         let {id} = req.user
         datos.user = id
+        let categoria = await categoriasModel.findOne({_id: datos.categoria})
+        if(!categoria) return res.status(403).send({message: 'No se encontro la categoria'})
         let usuario = await userModel.findOne({_id: id})
         let publicacion = new publicacionModel(datos)
         await publicacion.save()
@@ -21,6 +24,17 @@ export const agregarPublicacion = async(req,res)=>{
     }
 }
 
+export const listarPublicacion = async(req,res)=>{
+    try {
+        let publicacion = await publicacionModel.find()
+        if(publicacion.length === 0)return res.status(500).send({message: 'No funciono'})
+        return res.send({publicacion})
+    } catch (err) {
+        console.error(err)
+        
+    }
+}
+
 export const actualizarPublicacion = async(req,res)=>{
     try {
         let {uid} = req.params
@@ -28,7 +42,10 @@ export const actualizarPublicacion = async(req,res)=>{
         let {id} = req.user
         datos.user = id
         let publicacion = await publicacionModel.findOne({_id: uid})
+         
         if(!publicacion) return res.status(404).send({message:'No se encontro una publicacion'})
+        let categoria = await categoriasModel.findOne({_id: datos.categoria})
+        if(!categoria) return res.status(403).send({message: 'No se encontro la categoria'})
         if ('user' in datos ) {
             return res.status(400).send({ message: 'Hay datos que no se pueden actualizar' });
         }
